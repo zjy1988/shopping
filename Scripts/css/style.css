@@ -1,0 +1,60 @@
+.tabs{
+    background: #886AEA!important;
+}
+.tabs a i.icon{
+    font-size: 28px;
+    height: 30px;
+}
+.tabs a.tab-item{
+    font-size: 13px!important;
+    color: #fff;
+}
+/*ºı»•ŒÔ∆∑*/
+.list .every a .subtrct,.list .every a .add{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+.list .every a .quantity{
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+.list .every a .delete{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #886AEA;
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+.total{
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+    background: #fff;
+    position: absolute;
+    bottom: 49px;
+    left: 0;
+    border-top: 1px solid #ccc;
+}
+.total .check{
+    float: left;
+    margin-left: 8px;
+}
+.total .checkAll,.total #sum{
+    float: left;
+}
+.total #closeBtn{
+    float: right;
+}
