@@ -9,7 +9,21 @@
     font-size: 13px!important;
     color: #fff;
 }
-/*ºı»•ŒÔ∆∑*/
+.list .every span.check,.total span{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    color: #fff;
+    font-size: 20px;
+}
+.list .every span.on,.total span.on{
+    border: 1px solid #387EF5;
+    background: #387EF5;
+}
 .list .every a .subtrct,.list .every a .add{
     width: 25px;
     height: 25px;
@@ -48,7 +62,7 @@
     left: 0;
     border-top: 1px solid #ccc;
 }
-.total .check{
+.total .checkAll{
     float: left;
     margin-left: 8px;
 }

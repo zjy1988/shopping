@@ -16,24 +16,13 @@ app.controller('shopController',['$scope','ajaxServer',function($scope,ajaxServe
             }
         })
     }
+    $scope.flag = false;
     $scope.deleteFn = function(index){
         $scope.things.splice(index,1)
-    };
-    $scope.checkAll = function(){
-        if(!$scope.flag){
-            $scope.flag = true;
-            $scope.things.forEach(function(val){
-                val.check = true;
-            })
-        }else{
-            $scope.flag = false;
-            $scope.things.forEach(function (val) {
-                val.check = false;
-            })
-        }
         getTotal()
     };
     $scope.checkFn = function(index){
+        console.log(1)
         var things = $scope.things;
         var count = 0;
         things[index].check = !things[index].check;
@@ -49,13 +38,27 @@ app.controller('shopController',['$scope','ajaxServer',function($scope,ajaxServe
         }
         getTotal();
     };
-    $scope.countFn = function (val) {
-        console.log($scope.item)
+    $scope.checkAll = function(){
+        if(!$scope.flag){
+            $scope.flag = true;
+            $scope.things.forEach(function(val){
+                val.check = true;
+            })
+        }else{
+            $scope.flag = false;
+            $scope.things.forEach(function (val) {
+                val.check = false;
+            })
+        }
+        getTotal()
+    };
+
+    $scope.countFn = function (val,index) {
         if (val == "+") {
-            $scope.item.num += 1;
+            $scope.things[index].num += 1;
         } else {
-            if ($scope.item.num <= 1) return;
-            $scope.item.num -= 1;
+            if ($scope.things[index].num <= 1) return;
+            $scope.things[index].num -= 1;
         }
         getTotal()
     }
